@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  facebook_id: 
+  year: 1
+  month: 1
+  day: 1
+
+two:
+  facebook_id: 
+  year: 1
+  month: 1
+  day: 1

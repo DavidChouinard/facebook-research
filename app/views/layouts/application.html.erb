@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Know a Facebook user that recently deceased?</title>
+  <%= javascript_include_tag "//use.typekit.com/gkp5vyd.js" %>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--[if !IE 7]>
+  <style type="text/css">
+    #wrap {display:table;height:100%}
+  </style>
+  <![endif]-->
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '<%= Facebook::APP_ID %>', // App ID
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // respond to clicks on the login and logout links
+    $('#auth-loginlink').on('click', function(e) {
+      e.preventDefault();
+      FB.login(function(response) {
+        if (response.authResponse) {
+          // user is logged into Facebook, reload the page
+          window.location.reload();
+        }
+      }, {scope: 'user_status,friends_status,user_birthday,friends_birthday,read_stream'});
+    });
+
+    FB.Event.subscribe('auth.statusChange', function(response) {
+      if (response.authResponse) {
+        FB.api('/me/friends', function(result) {
+          friends = _.map(result.data, function(friend) { return {"label": friend.name, "id":friend.id} });
+          $('.annotation_facebook_name').autocomplete({
+            source: friends,
+            select: function(event, ui) {
+              $(this).siblings('.annotation_facebook_id').val(ui.item.id);
+            }
+          })
+        });
+      }
+    });
+  };
+
+</script>
+
+<div id="wrap">
+  <div id="main">
+    <%= yield %>
+  </div>
+</div>
+
+<footer>
+  <p><a href="/privacy">What data does this app collect?</a></p>
+  <p>This research is conducted at Concordia University by David Chouinard under the supervision of Dr. Sabine Bergler.</p>
+</footer>
+
+</body>
+</html>

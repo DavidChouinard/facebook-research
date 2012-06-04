@@ -1,0 +1,33 @@
+<h1>Know a Facebook user that recently deceased?</h1>
+
+<p class="large"><strong>Donate your Facebook data to science.</strong> Your data will be used to better understand interaction patterns with deceased users on Facebook.</p>
+
+<section id="set-in">
+  <% if defined?(cookies[:completed]) && cookies[:completed] %>
+    <div id="thankyou-container">
+      <h3>Thank you!</h3>
+    </div>
+  <% else %>
+    <% unless notice.nil? %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+
+    <% unless @facebook_cookies.nil? %>
+      <p id="notice">Please tag the appropriate users and enter a death date. Be as specific as possible, but leave empty fields if you are uncertain.</p>
+    <% end %>
+    <div id="setin-container">
+      <% if @facebook_cookies.nil? %>
+        <div class="fb-button-container">
+          <a class="fb-button" id="auth-loginlink" href="">
+            <span class="fb-button-left"></span>
+            <span class="fb-button-center"><strong>Log in</strong> with <strong>Facebook</strong></span>
+            <span class="fb-button-right"></span>
+          </a>
+          <div style="clear: both"></div>
+        </div>
+      <% else %>
+        <%= render 'form' %>
+      <% end %>
+    <% end %>
+  </div>
+</section>

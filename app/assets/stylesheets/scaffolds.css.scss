@@ -1,0 +1,290 @@
+* {margin:0; padding:0;}
+
+body {
+  background-color: #405f83;
+  background-image: url(blueprint.png);
+  color: #fff;
+  font-family: skolar, serif;
+  height: 100%;
+}
+
+html {
+  font: 150%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  height: 100%;
+}
+
+p {
+  margin-bottom: 36px;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #fff;
+  &:visited {
+    color: #fff; }
+  &:hover {
+    color: #fff;
+    background-color: #000; } }
+
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: ff-meta-web-pro, sans-serif;
+  color: #FFF2C2;
+  font-size: 90px;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 36px;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: ff-meta-web-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: .2em;
+  font-size: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-top: 1rem;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom: 50px; /* must be same height as the footer */
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  p {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-size: 0.5rem;
+  }
+}
+
+#container {
+  max-width: 830px;
+  margin: 60px auto;
+}
+
+#notice {
+  background: #c8ffbf;
+  border-bottom: 1px solid #a2ef95;
+  margin: 0;
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }
+
+#set-in {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  color: #222;
+  margin-top: 70px;
+  text-shadow: none;
+  font-size: 16px;
+  font-size: 0.75rem;
+  table {
+    width: 100%;
+  }
+  input {
+    font-size: 16px;
+    width: 100%;
+  }
+  .slim {
+    width: 100px;
+  }
+}
+
+#setin-container {
+  padding: 1.5em;
+}
+
+.smalltype {
+  font-size: 16px;
+  font-size: 0.75rem;
+  p, li {
+    margin: 12px 0 6px;
+    margin: 0.5rem 0 0.25rem;
+  }
+}
+
+#user_list td {
+  padding: 4px 6px;
+  vertical-align: top;
+  text-align: center;
+}
+
+label.error {
+  color: red;
+}
+
+#thankyou-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+/*
+   Facebook Button */
+
+.fb-button-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fb-button
+{
+  float: left;
+  position: relative;
+  left: 28%;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0;
+  border: 0 none!important;
+  outline: none;
+  font: 75%/1.25 "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman","TeXGyreHerosRegular","Helvetica","Tahoma","Geneva","Arial",sans-serif;
+}
+.fb-button:hover
+{
+  -o-box-shadow: inset 0 0 .2em rgba(255,255,255,0.3),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: inset 0 0 .2em rgba(255,255,255,0.3),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: inset 0 0 .2em rgba(255,255,255,0.3),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 5px rgba(0,0,0,0.6);
+  box-shadow: inset 0 0 .2em rgba(255,255,255,0.3),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 5px rgba(0,0,0,0.6)
+}
+.fb-button:active
+{
+  -o-box-shadow: inset 0 0 .7em rgba(0,0,0,0.9),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 0 .7em rgba(0,0,0,0.9),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 .7em rgba(0,0,0,0.9),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 .7em rgba(0,0,0,0.9),inset 0 0 .2em rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.3)
+}
+.fb-button,.fb-button:hover
+{
+  text-decoration: none
+}
+.fb-button.loading
+{
+  background: url("loading.gif") 50% top no-repeat;
+  cursor: default
+}
+.fb-button.loading .fb-button-right,.fb-button.loading .fb-button-center,.fb-button.loading .fb-button-left
+{
+  visibility: hidden
+}
+.fb-button.loading:hover
+{
+  -o-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+}
+.fb-button.loading:active
+{
+  -o-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+  box-shadow: 0 0 0 transparent,0 0 0 transparent,0 0 0 transparent;
+}
+.fb-button strong
+{
+  font-weight: bolder;
+}
+.fb-button,.fb-button-right,.fb-button-center,.fb-button-left
+{
+  display: block;
+}
+.fb-button-right,.fb-button-center,.fb-button-left
+{
+  float: left;
+  height: 40px;
+  background: url("fb-button-sprite.png") left top no-repeat;
+}
+.fb-button-left
+{
+  width: 40px;
+}
+.fb-button-center
+{
+  padding: 0 5px 0 8px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6385ba;
+  background-position: left -40px;
+  background-repeat: repeat-x;
+  text-align: center;
+  width: 256px;
+}
+.fb-button-right
+{
+  width: 6px;
+  background-position: 100% -80px
+}
+.fb-button:active .fb-button-left
+{
+  background-position: 100% -120px
+}
+.fb-button:active .fb-button-center
+{
+  background-position: 100% -160px
+}
+.fb-button:active .fb-button-right
+{
+  background-position: 100% -200px
+}

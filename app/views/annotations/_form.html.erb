@@ -1,0 +1,34 @@
+<%= form_for(@annotation) do |f| %>
+  <% if @annotation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@annotation.errors.count, "error") %> prohibited this annotation from being saved:</h2>
+
+      <ul>
+      <% @annotation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Day</th>
+    </thead>
+    <tbody id="user_list">
+      <tr>
+        <td><input class="annotation_facebook_name" name="annotation[][facebook_name]" type="text"><input class="annotation_facebook_id" name="annotation[][facebook_id]" type="hidden"></td>
+        <td class="slim"><input class="number annotation_year" name="annotation[][year]" placeholder="eg. 2008" type="number" min="0"></td>
+        <td class="slim"><input class="number annotation_month" name="annotation[][month]" placeholder="eg. 12" type="number" min="0" max="12"></td>
+        <td class="slim"><input class="number annotation_day" name="annotation[][day]" placeholder="eg. 31" type="number" min="0" max="31"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <input name="commit" type="submit" value="Submit &rarr;" style="width: inherit;">
+  </div>
+<% end %>
