@@ -1,4 +1,4 @@
-This is the source code of facebook-research.com, released here per the privacy policy. This is a Ruby on Rails application, the code that parses Facebook is `lib/parser.rb`.
+This is the source code of facebook-research.com, released here per the privacy policy. This is a Ruby on Rails application, the code that parses Facebook data (through open graph) is `lib/parser.rb`.
 
 Privacy Policy
 ========================
